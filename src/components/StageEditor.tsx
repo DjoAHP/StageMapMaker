@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import { Guitar, Drum, Mic, Speaker, Users } from 'lucide-react';
+// import { Guitar, Drum, Mic, Speaker, Users } from 'lucide-react';
 import { ElementLibrary } from './ElementLibrary';
 import { StagePlan } from './StagePlan';
 import { DraggableElement } from './DraggableElement';
-import { CameraIcon } from './CustomSvgIcon';
+// MES ICONS 
+import {
+  CaisseClaireIcon,
+  SymbaleIcon,
+  GrosseCaisseIcon,
+} from "./CustomSvgIcon";
 
 interface StageElement {
   id: string;
@@ -13,12 +18,10 @@ interface StageElement {
 }
 
 const elementIcons: Record<string, React.ReactNode> = {
-  guitar: <Guitar className="w-8 h-8" />,
-  drums: <Drum className="w-8 h-8" />,
-  mic: <Mic className="w-8 h-8" />,
-  speaker: <Speaker className="w-8 h-8" />,
-  musician: <Users className="w-8 h-8" />,
-  camera: <CameraIcon />,
+  // ELEMENTS A AJOUTER
+  caisseclaire: <CaisseClaireIcon className="w-8 h-8" />,
+  symbale: <SymbaleIcon className="w-8 h-8" />,
+  grossecaisse: <GrosseCaisseIcon className="w-8 h-8" />,
 };
 
 export const StageEditor: React.FC = () => {

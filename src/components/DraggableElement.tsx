@@ -12,7 +12,7 @@ interface DraggableElementProps {
 
 export const DraggableElement: React.FC<DraggableElementProps> = ({
   id,
-  type,
+  // type,
   initialPosition,
   initialRotation,
   icon,
@@ -92,7 +92,7 @@ export const DraggableElement: React.FC<DraggableElementProps> = ({
   return (
     <div
       ref={elementRef}
-      className={`absolute cursor-move p-3 bg-glass rounded-lg border border-glass-border backdrop-blur-glass transition-colors ${
+      className={`absolute cursor-move p-3  transition-colors ${
         isDragging ? 'bg-opacity-80' : 'hover:bg-opacity-60'
       }`}
       style={{

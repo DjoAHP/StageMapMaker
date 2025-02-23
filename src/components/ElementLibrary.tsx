@@ -1,51 +1,39 @@
 import React, { useState } from 'react';
-import { Music, Mic, Speaker, Users, Guitar, Drum, ChevronDown, Camera } from 'lucide-react';
-import { CameraIcon } from './CustomSvgIcon';
+import { Music, ChevronDown } from 'lucide-react';
+// MES ICONS 
+import {
+  CaisseClaireIcon,
+  SymbaleIcon,
+  GrosseCaisseIcon,
+} from "./CustomSvgIcon";
 
 const categories = [
+  // TOUTE CATEGORIE
   {
-    name: 'All Elements',
+    name: "All Elements",
     icon: <Music className="w-5 h-5" />,
     elements: [
-      { id: 'guitar', name: 'Guitar', icon: <Guitar className="w-8 h-8" /> },
-      { id: 'drums', name: 'Drums', icon: <Drum className="w-8 h-8" /> },
-      { id: 'mic', name: 'Microphone', icon: <Mic className="w-8 h-8" /> },
-      { id: 'speaker', name: 'Speaker', icon: <Speaker className="w-8 h-8" /> },
-      { id: 'musician', name: 'Musician', icon: <Users className="w-8 h-8" /> },
-      { id: 'camera', name: 'Camera', icon: <CameraIcon /> },
-    ]
+      { id: "caisseclaire", name: "CaisseClaire", icon: <CaisseClaireIcon /> },
+      { id: "symbale", name: "Symbale", icon: <SymbaleIcon /> },
+      { id: "grossecaisse", name: "GC", icon: <GrosseCaisseIcon /> },
+    ],
   },
+
+  // CATEGORIE: BATTERIE
   {
-    name: 'Instruments',
-    icon: <Music className="w-5 h-5" />,
+    name: "Batterie",
+    // ICON DE LA CATEGORIE
+    icon: <CaisseClaireIcon className="w-5 h-5" />,
+    // ELEMENTS
     elements: [
-      { id: 'guitar', name: 'Guitar', icon: <Guitar className="w-8 h-8" /> },
-      { id: 'drums', name: 'Drums', icon: <Drum className="w-8 h-8" /> },
-    ]
+      { id: "caisseclaire", name: "CaisseClaire", icon: <CaisseClaireIcon /> },
+      { id: "symbale", name: "Symbale", icon: <SymbaleIcon /> },
+      { id: "grossecaisse", name: "GC", icon: <GrosseCaisseIcon /> },
+    ],
   },
-  {
-    name: 'Sound',
-    icon: <Speaker className="w-5 h-5" />,
-    elements: [
-      { id: 'mic', name: 'Microphone', icon: <Mic className="w-8 h-8" /> },
-      { id: 'speaker', name: 'Speaker', icon: <Speaker className="w-8 h-8" /> },
-    ]
-  },
-  {
-    name: 'People',
-    icon: <Users className="w-5 h-5" />,
-    elements: [
-      { id: 'musician', name: 'Musician', icon: <Users className="w-8 h-8" /> },
-    ]
-  },
-  {
-    name: 'Custom',
-    icon: <Camera className="w-5 h-5" />,
-    elements: [
-      { id: 'camera', name: 'Camera', icon: <CameraIcon /> },
-    ]
-  }
 ];
+
+// EXPORT FONCTION 
 
 export const ElementLibrary: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All Elements');
